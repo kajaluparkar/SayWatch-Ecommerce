@@ -1,0 +1,187 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SayWatch_Ecommerce.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Zay Shop</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+       
+
+
+    <style>
+        .auto-style1 {
+            font-size: large;
+        }
+        html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+        
+    </style>
+
+</head>
+<body >
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+                        <!---navbar Start-->
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" runat="server" href="~/" style="color:#59ab6e;">Zay</a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" style="align-items:center;">
+                    <ul class="navbar-nav flex-grow-1" style="margin-right:20px; font-family: 'Roboto', sans-serif;font-size: 18px;font-weight: 300;">
+                        <li class="nav-item" style="margin-right:20px;"><a class="nav-link" runat="server" href="~/" style="font-family: 'Roboto', sans-serif;
+font-size: 18px;
+font-weight: 300;" > Home</a></li>
+                        <li class="nav-item" style="margin-right:20px;"><a class="nav-link" runat="server" href="~/About">About</a></li>
+                        <li class="nav-item" style="margin-right:20px;"><a class="nav-link" runat="server" href="~/Contact" > Contact</a></li>
+                        
+                    </ul>
+                    &nbsp;&nbsp;&nbsp;
+                    <p class="nav-item"><a class="nav-link" runat="server" href="~/signup" style="font-family:'Roboto', sans-serif; font-size: 18px; font-weight:300;color:green;" >SignUp </a></p>
+                    <p class="nav-item"><a class="nav-link" runat="server" href="~/signin" style="font-family: 'Roboto', sans-serif; font-size: 18px; font-weight:300;color:green;">SignIn </a></p>
+
+                </div>
+            </div>
+        </nav>
+
+                        <!---navbar End-->
+
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+
+            <!--Footer start-->
+                    <hr style="border: 1px solid #59ab6e;" /> 
+         
+           
+         <footer class="p-5 bg-transparent text-dark text-center position-relative abc">
+                <div class="row  mt-1">
+<div class="col-4" >
+        <h2 style="color: #59ab6e;padding-left:15px; ">Zay Watch Store</h2>
+    <i class="fas fa-map-marker-alt fa-fw"></i>
+        123 Consectetur at ligula 10660
+      </div>
+
+<div class="col-4 text-dark">   
+    <i class="fa fa-phone fa-fw"></i>
+    <a href="tel:010-020-0340" class="text-muted">010-020-0340</a>   
+</div>
+
+<div class="col-4 text-dark">
+    <i class="fa fa-envelope fa-fw"></i>
+   <a  href="mailto:info@company.com" class="text-muted">info@company.com</a>
+</div>
+</div>
+            
+                    <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                        <i class="bi bi-arrow-up-circle h1"></i>
+                    </a>
+            </footer>
+                        <!--Footer End-->
+
+       
+            <%--<hr style="border: 1px solid #59ab6e;" /> 
+            <style>
+                .footer{
+                     width: 100%;
+                  margin: 0 auto; /* Center the footer */
+
+                }
+            </style>
+           
+           <section>
+            <div class="container footer">
+            <div class="row justify-content-center mt-5">
+            <div class="col-4" style="padding-bottom:20px;">
+                    <h2 style="color: #59ab6e;padding-left:15px; ">Zay Watch Store</h2>
+                <i class="fas fa-map-marker-alt fa-fw"></i>
+                    123 Consectetur at ligula 10660
+                  </div>
+
+            <div class="col-4">   
+                <i class="fa fa-phone fa-fw"></i>
+                <a href="tel:010-020-0340" class="text-muted">010-020-0340</a>   
+            </div>
+
+            <div class="col-4">
+                <i class="fa fa-envelope fa-fw"></i>
+               <a  href="mailto:info@company.com" class="text-muted">info@company.com</a>
+            </div>
+            </div>
+            </div>
+          </section>    
+           
+          <footer>
+                <div style="height:130px;padding-left:10px;width:100%" >
+                    <h2 style="color: #59ab6e;padding-left:15px;">Zay Watch Store</h2>
+                    <ul style="display:flex;justify-content:center">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <li>
+                          <i class="fas fa-map-marker-alt fa-fw"></i>
+                            123 Consectetur at ligula 10660
+                      </li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <a href="tel:010-020-0340">010-020-0340</a>
+                        </li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li>
+                            <i class="fa fa-envelope fa-fw"></i>
+                            <a  href="mailto:info@company.com">info@company.com</a>
+                        </li>
+                    </ul>
+                 <p style="color:#cfd6e1"><strong><span class="auto-style1"><em>&copy; <%: DateTime.Now.Year %> - Zay Shop</em></span></strong></p>
+                </div>
+                
+            </footer>--%>
+
+
+        </div>
+    </form>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+    </asp:PlaceHolder>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <script src="https://kit.fontawesome.com/3997d8d491.js" crossorigin="anonymous"></script>
+</body>
+</html>

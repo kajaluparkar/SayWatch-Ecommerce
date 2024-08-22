@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Optimization;
@@ -21,9 +22,16 @@ namespace SayWatch_Ecommerce
 
         void Session_Start(object sender, EventArgs e)
         {
-            Session["username"] = "Guest";
+            Session["username"] = "";
             Session["watchid"] = 0;
-            
+            Session["OrderValue"] = "";
+            Session["Discount"] = "";
+            Session["Shipping"] = "";
+            Session["TotalPayable"] = "";
+            Session["OrderId"] = 0;
+            Session["userId"] = 0;
+
+
         }
     }
 }

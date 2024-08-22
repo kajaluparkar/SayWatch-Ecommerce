@@ -65,7 +65,7 @@ namespace SayWatch_Ecommerce
             }
             if(res== "buynow")
             {
-                Response.Redirect("Buynow.aspx");
+                Response.Redirect("ProceedtoBuy.aspx");
             }
         }
     }

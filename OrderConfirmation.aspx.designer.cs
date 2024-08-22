@@ -11,88 +11,61 @@ namespace SayWatch_Ecommerce
 {
 
 
-    public partial class viewcart
+    public partial class OrderConfirmation
     {
 
         /// <summary>
-        /// ItemsCountLabel control.
+        /// lblOrderValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ItemsCountLabel;
+        protected global::System.Web.UI.WebControls.Label lblOrderValue;
 
         /// <summary>
-        /// CartRepeater control.
+        /// lblDiscount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater CartRepeater;
+        protected global::System.Web.UI.WebControls.Label lblDiscount;
 
         /// <summary>
-        /// SummaryItemsCountLabel control.
+        /// lblShipping control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SummaryItemsCountLabel;
+        protected global::System.Web.UI.WebControls.Label lblShipping;
 
         /// <summary>
-        /// OrderValueLabel control.
+        /// lblTotalPayable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label OrderValueLabel;
+        protected global::System.Web.UI.WebControls.Label lblTotalPayable;
 
         /// <summary>
-        /// DiscountLabel control.
+        /// lblOrderDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label DiscountLabel;
+        protected global::System.Web.UI.WebControls.Label lblOrderDate;
 
         /// <summary>
-        /// ShippingLabel control.
+        /// hlBackToHome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ShippingLabel;
-
-        /// <summary>
-        /// TotalPayLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TotalPayLabel;
-
-        /// <summary>
-        /// btngoback control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btngoback;
-
-        /// <summary>
-        /// btncheckout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btncheckout;
+        protected global::System.Web.UI.WebControls.HyperLink hlBackToHome;
     }
 }

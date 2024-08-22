@@ -16,18 +16,46 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
   <link href="styles.css" rel="stylesheet" />
-       
+       <!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
 
     <style>
-        .auto-style1 {
-            font-size: large;
+         body {
+             
+              
+            background: url('tenor.gif') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 1;
+            width:100%;
+            height:100%;
+
         }
-        html, body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
+        .content {
+           background: rgba(255, 255, 255, 0.8); 
+            width: 100%;
+            padding: 20px;
+           
+            
+
+        }
+       
+        
+        .auto-style2 {
+            display: block;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-clip: padding-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: .25rem;
+            transition: none;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+        }
 
         
     </style>
@@ -65,26 +93,46 @@
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" style="align-items:center;">
                     <ul class="navbar-nav flex-grow-1" style="margin-right:20px; font-family: 'Roboto', sans-serif;font-size: 18px;font-weight: 300;">
                         <li class="nav-item" style="margin-right:20px;"><a class="nav-link" runat="server" href="~/" style="font-family: 'Roboto', sans-serif;
-font-size: 18px;
-font-weight: 300;" > Home</a></li>
+                     font-size: 18px;
+                   font-weight: 300;" > Home</a></li>
                         <li class="nav-item" style="margin-right:20px;"><a class="nav-link" runat="server" href="~/About">About</a></li>
                         <li class="nav-item" style="margin-right:20px;"><a class="nav-link" runat="server" href="~/Contact" > Contact</a></li>
                         
                     </ul>
-                    &nbsp;&nbsp;&nbsp;
-                    <p class="nav-item"><a class="nav-link" runat="server" href="~/signup" style="font-family:'Roboto', sans-serif; font-size: 18px; font-weight:300;color:green;" >SignUp </a></p>
-                    <p class="nav-item"><a class="nav-link" runat="server" href="~/signin" style="font-family: 'Roboto', sans-serif; font-size: 18px; font-weight:300;color:green;">SignIn </a></p>
+                              <formview class="form-inline my-2 my-lg-0 mr-5">
+  <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-success my-3 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+</formview>
+                                        
+        
+              
+                     <asp:PlaceHolder ID="phNotAuthenticated" runat="server">
+                <p class="nav-item"><a class="nav-link" runat="server" href="~/signup" style="font-family:'Roboto', sans-serif; font-size: 18px;">SignUp</a></p>
+                <p class="nav-item"><a class="nav-link" runat="server" href="~/signin" style="font-family: 'Roboto', sans-serif;font-size: 18px; ">SignIn</a></p>
+            </asp:PlaceHolder>
 
+            <asp:PlaceHolder ID="phAuthenticated" runat="server">
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family:'Roboto', sans-serif; font-size: 18px; font-weight:200;color:#59ab6e;">
+                        <span><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" runat="server" href="~/profile">View Profile</a>
+                        <a class="dropdown-item" runat="server" href="~/settings">Settings</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" runat="server" href="logout.aspx">Logout</a>
+                    </div>
                 </div>
-            </div>
+            </asp:PlaceHolder>
+</div>
+                </div>
         </nav>
 
                         <!---navbar End-->
 
-        <div class="container body-content">
+        <div class="container body-content content"" >
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-
 
 
             <!--Footer start-->
@@ -173,8 +221,8 @@ font-weight: 300;" > Home</a></li>
                 
             </footer>--%>
 
-
         </div>
+        
     </form>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
@@ -183,5 +231,6 @@ font-weight: 300;" > Home</a></li>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
      <script src="https://kit.fontawesome.com/3997d8d491.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

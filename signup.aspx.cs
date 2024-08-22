@@ -44,6 +44,7 @@ namespace SayWatch_Ecommerce
                     cmd.ExecuteNonQuery();
                     Response.Write("<script> alert('Registeration Saved Succesfully !!!') </script>");
                     Clear();
+                    Response.Redirect("default.aspx");
 
                 }
             }

@@ -40,7 +40,7 @@ namespace SayWatch_Ecommerce
                     Session["username"] = un;
                     if (r == "user")
                     {
-                        Response.Redirect("userdashboard.aspx");
+                        Response.Redirect("default.aspx");
                     }
                     else if (r == "admin")
                     {
